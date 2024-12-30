@@ -1,0 +1,1 @@
+The Firebase SDK might throw an error if you try to access a property of a document snapshot before the `snapshot.exists` check. For example, if you try to access `snapshot.data().name` when `snapshot.exists` is false, it will throw an error. This can happen if you have asynchronous operations where you try to access the data before the promise resolves or the data is fetched.
